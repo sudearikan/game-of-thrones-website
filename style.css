@@ -1,0 +1,416 @@
+/* Genel Ayarlar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Merriweather', serif;
+  color: #333;
+  background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+  line-height: 1.6;
+  padding-bottom: 50px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', serif;
+  color: #bfa84b;
+  text-shadow: 1px 1px 2px #000;
+  margin-bottom: 20px;
+  font-variant: normal;
+  text-transform: none;
+}
+
+p, label, a {
+  font-family: 'Merriweather', serif;
+  color: #3b3b3b;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+}
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.08em;
+}
+h3 {
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+}
+h4 {
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
+  padding: 15px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.poster {
+  display: block;
+  margin: 30px auto 40px auto;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 40px 20px;
+  width: 95%;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.karakterler {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+
+
+
+
+.karakter {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   flex: 1 1 calc(25% - 40px); /* 4 sütun görünümü */
+  max-width: 300px;
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  color: #222;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInSlide 0.6s ease forwards;
+}
+/* Karakterler hover efekti güncellemesi */
+.karakter:hover {
+  background-color: #fff8dc;
+  transform: scale(1.05);
+}
+
+.karakter:hover h3,
+.karakter:hover p {
+  color: #bfa84b;
+  transition: color 0.3s ease;
+}
+
+
+
+
+
+.karakter img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(241, 196, 15, 0.3);
+}
+
+.favori-sahne {
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.favori-sahne h2 {
+  color: #f1c40f;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.favori-sahne p {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.favori-sahne iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 394px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(241, 196, 15, 0.25);
+  display: block;
+  margin: 0 auto;
+  border: none;
+}
+
+.bolumler-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 0 20px 40px 20px;
+}
+
+section, 
+#bolumlar-container, 
+.favori-sahne, 
+.karakterler {
+  max-width: 1400px; /* Örneğin 1400px yaptım, istersen 1500px ya da %90 yapabiliriz */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bolum {
+  background: #fefefe;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.12);
+  cursor: default;
+  color: #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bolum:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(241, 196, 15, 0.5);
+  background: #fff8dc;
+  color: #111;
+}
+
+#hakkinda p {
+  margin-bottom: 15px;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+#hakkinda a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+#hakkinda a:hover {
+  color: #1abc9c;
+}
+
+.favori-btn {
+  display: block;
+  margin: 25px auto;
+  background-color: transparent;
+  color: #f39c12;
+  border: 2px solid #f39c12;
+  padding: 12px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  width: max-content;
+}
+
+.favori-btn.active {
+  background-color: #f39c12;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 0 0 12px 12px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li a {
+    padding: 15px 20px;
+    color: #333;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+
+
+   .logo img {
+    height: 40px;
+  }
+}
+
+.sezon-select-container {
+  max-width: 400px;
+  margin: 30px auto 50px auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1c40f;
+  font-weight: 700;
+  font-size: 1.3rem;
+  user-select: none;
+}
+
+.sezon-select-container label {
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+
+#sezonSelect {
+  flex-grow: 1;
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  background-color: #fff;
+  border: 2px solid #f1c40f;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(241, 196, 15, 0.3);
+  cursor: pointer;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23f1c40f" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#sezonSelect:hover {
+  border-color: #f39c12;
+  background-color: #fffbe6;
+  box-shadow: 0 8px 18px rgba(243, 156, 18, 0.5);
+}
+
+#sezonSelect:focus {
+  border-color: #d4ac0d;
+  background-color: #fff9db;
+  box-shadow: 0 0 14px rgba(212, 172, 13, 0.7);
+  outline: none;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.house-logos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin: 60px auto;
+  padding: 20px 0;
+  max-width: 98vw; /* Ekranın %98’i kadar geniş */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.house {
+  text-align: center;
+  width: 150px; /* Kutuları biraz daha büyüttüm */
+  transition: transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+.house img {
+  width: 100%;
+  height: auto;
+  max-height: 105px; /* Logo biraz daha büyük */
+  object-fit: contain;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease;
+}
+
+.house:hover img {
+  transform: scale(1.15);
+}
+
+.house p {
+  font-family: 'Cinzel', serif;
+  color: #bfa84b;
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 2px #000;
+  margin-top: 10px;
+  user-select: none;
+}
+
+
+
+
+
+

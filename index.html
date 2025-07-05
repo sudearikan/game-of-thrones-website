@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game of Thrones</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\logo.png" alt="Game of Thrones Logo" />
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#ana">Ana Sayfa</a></li>
+        <li><a href="#bolumler">Bölümler</a></li>
+        <li><a href="#hakkinda">Hakkında</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Ana Sayfa -->
+  <section id="ana">
+    <h1 class="fade-in">Game of Thrones</h1>
+    <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\afis.jpg" alt="Game of Thrones Afişi" class="poster fade-in">
+    <p class="fade-in">Game of Thrones, George R.R. Martin’in epik fantastik roman serisi A Song of Ice and Fire’dan uyarlanmış, dünya çapında büyük ses getiren bir televizyon dizisidir. Ortaçağ atmosferinde geçen bu hikaye, Westeros adlı kurgusal bir kıtada, farklı soylu ailelerin taht mücadelesini ve iktidar oyunlarını konu alır. Entrika, ihanet, aşk ve savaşın iç içe geçtiği dizide, her karakterin kendine özgü bir hikayesi ve karmaşık motivasyonları bulunur.
+
+Dizi, demir tahtın gerçek sahibi olmak için verilen acımasız mücadeleyi gözler önüne sererken, doğaüstü unsurlar ve eski kehanetler de hikayeyi derinleştirir. Ejderhalar, büyü, beyaz yürüyenler ve kadim sırlar, Westeros’un karanlık dünyasına mistik bir hava katmaktadır.
+
+Game of Thrones, sadece fantastik öğeleriyle değil; insan doğasının karmaşıklığını, güç hırsının sonuçlarını ve sadakatin sınırlarını sorgulamasıyla da izleyicileri büyülemiştir. Sürükleyici anlatımı, unutulmaz karakterleri ve beklenmedik olay örgüsüyle, televizyon tarihinin en etkileyici yapımlarından biri olarak kabul edilir.</p>
+
+    <section class="karakterler-section">
+  <h2>Karakterler</h2>
+    <div class="karakterler">
+      <div class="karakter fade-in">
+        <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\jon snow.png" alt="Jon Snow">
+        <h3>Jon Snow</h3>
+        <p>Kuzeyin Kralı, Onur timsali ve Gece Nöbetçileri'nin lideri.</p>
+      </div>
+      <div class="karakter fade-in">
+        <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\daenerys targaryen.jpg" alt="Daenerys Targaryen">
+        <h3>Daenerys Targaryen</h3>
+        <p>Ejderhaların Annesi, Demir Taht’ın hak sahibi.</p>
+      </div>
+      <div class="karakter fade-in">
+        <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\jaime lannister.jpg" alt="Jaime Lannister">
+        <h3 lang="en">Jaime Lannister</h3>
+        <p>Kraliçe’nin kardeşi, Kral Katili olarak bilinir. Onurlu bir savaşçıdır.</p>
+      </div>
+      <div class="karakter fade-in">
+        <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\tyrion lannister.jpg" alt="Tyrion Lannister">
+        <h3 lang="en">Tyrion Lannister</h3>
+        <p>Zekasıyla savaşan cüce, kral danışmanı.</p>
+      </div>
+    </div>
+
+    <div class="favori-sahne fade-in">
+      <h2>Favori Sahnem</h2>
+   <p class="normal-text">Kuzey’in kaderini belirleyen, Jon Snow ile Ramsay Bolton arasında geçen efsanevi ve kanlı ‘Battle of the Bastards’ çatışması.</p>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/oUjaljMMy2M" title="Battle of the Bastards" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Bölüm Listesi -->
+  <section id="bolumler">
+    <h2 class="fade-in">Bölüm Listesi</h2>
+    <div class="sezon-select-container fade-in">
+      <label for="sezonSelect">Sezon Seçin:</label>
+      <select id="sezonSelect">
+        <option value="">-- Sezon Seçiniz --</option>
+        <option value="1">1. Sezon</option>
+        <option value="2">2. Sezon</option>
+        <option value="3">3. Sezon</option>
+        <option value="4">4. Sezon</option>
+        <option value="5">5. Sezon</option>
+        <option value="6">6. Sezon</option>
+        <option value="7">7. Sezon</option>
+        <option value="8">8. Sezon</option>
+      </select>
+    </div>
+    <div id="bolumlar-container" class="bolumler-grid fade-in">
+      <!-- Seçilen sezonun bölümleri burada gösterilecek -->
+    </div>
+  </section>
+
+
+
+  <!-- House Logoları -->
+<section class="house-logos fade-in">
+  <div class="house">
+    <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\starks.jpg" alt="House Stark" title="House Stark">
+    <p>House Stark</p>
+  </div>
+  <div class="house">
+    <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\lannisters.jpg" alt="House Lannister" title="House Lannister">
+    <p>House Lannıster</p>
+  </div>
+  <div class="house">
+    <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\targaryen.jpg" alt="House Targaryen" title="House Targaryen">
+    <p>House Targaryen</p>
+  </div>
+  <div class="house">
+    <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\baratheons.jpg" alt="House Baratheon" title="House Baratheon">
+    <p>House Baratheon</p>
+  </div>
+  <div class="house">
+    <img src="C:\Users\sude.arıkan\Desktop\favori-dizi\images\greyjoys.jpg" alt="House Greyjoy" title="House Greyjoy">
+    <p>House Greyjoy</p>
+  </div>
+</section>
+
+   <!-- Hakkında -->
+  <section id="hakkinda">
+    <h2 class="fade-in">Hakkında</h2>
+    <p class="fade-in">Bu web sayfası Cennet Sude Arıkan tarafından HTML & CSS Bootcamp projesi olarak tasarlanmıştır.</p>
+    <a class="fade-in" href="https://github.com/sudearikan" target="_blank">GitHub Profilim</a>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
